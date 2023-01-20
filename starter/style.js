@@ -4,9 +4,11 @@ $(document).ready(function() {
     $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
     // Create timeblocks for standard business hours using a for loop
+    var currentTime = moment().hour();
+    
     for (var i =9; i < 18; i++) {
         // create div for each timeblock
-        timeBlock = $("<div");
+        timeBlock = $("<div>");
         timeBlock.addClass("row time-block");
 
         // create div for the hour
@@ -16,8 +18,8 @@ $(document).ready(function() {
         timeBlock.append(hourDiv);
 
         // create a text area for the event
-        var eventTxt = $("<div>");
-        eventTxt.addClass("col-md-8 event-description");
+        var eventTxt = $("<textarea>");
+        eventTxt.addClass("col-md-8 description");
         timeBlock.append(eventTxt);
 
         // create a save button
@@ -26,15 +28,22 @@ $(document).ready(function() {
         timeBlock.append(saveBtn);
 
         // append timeblock to the container
-
-        // Check the current time
+        $(".container").append(timeBlock);
 
         // If the timeblock is in the past, add the past class
-     
+        if (i < currentTimeBlock) {
+            eventTxt.addClass(".past");
+        }
         // If the timeblock is in the present, add the present class
-      
+        else if ( i === currentTime ) {
+            eventTxt.addClass(".present");
+        
+        }
         // If the timeblock is in the future, add the future class
-    
+        else if (i > currentTime) {
+            eventTxt.addClass(".future");
+        }
+    }
         // Add an event listener to the save button
     
         // Get the value of the textarea
