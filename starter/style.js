@@ -31,17 +31,17 @@ $(document).ready(function() {
         $(".container").append(timeBlock);
 
         // If the timeblock is in the past, add the past class
-        if (i < currentTimeBlock) {
-            eventTxt.addClass(".past");
+        if (i < currentTime) {
+            eventTxt.addClass("past");
         }
         // If the timeblock is in the present, add the present class
         else if ( i === currentTime ) {
-            eventTxt.addClass(".present");
+            eventTxt.addClass("present");
         
         }
         // If the timeblock is in the future, add the future class
         else if (i > currentTime) {
-            eventTxt.addClass(".future");
+            eventTxt.addClass("future");
         }
     }
         // Add an event listener to the save button
