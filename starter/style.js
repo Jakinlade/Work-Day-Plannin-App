@@ -10,10 +10,20 @@ $(document).ready(function() {
         timeBlock.addClass("row time-block");
 
         // create div for the hour
+        var hourDiv = $("<div>");
+        hourDiv.addClass("hour col-md-2");
+        hourDiv.text(i + ":00");
+        timeBlock.append(hourDiv);
 
         // create a text area for the event
+        var eventTxt = $("<div>");
+        eventTxt.addClass("col-md-8 event-description");
+        timeBlock.append(eventTxt);
 
         // create a save button
+        var saveBtn = $("<button>");
+        saveBtn.addClass("col-md-2 saveBtn");
+        timeBlock.append(saveBtn);
 
         // append timeblock to the container
 
