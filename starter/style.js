@@ -1,15 +1,45 @@
-// Create a variable to store current date and time using the Moment.js library
+$(document).ready(function() {
 
-// Display the current date and time at the top of calendar
+    // Display the current date and time at the top of calendar
+    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
-// Create timeblocks for standard business hours using a for loop
+    // Create timeblocks for standard business hours using a for loop
+    for (var i =9; i < 18; i++) {
+        // create div for each timeblock
+        timeBlock = $("<div");
+        timeBlock.addClass("row time-block");
 
-// Within the for loop, create a color-coding system to distinguish between past, present, and future tblocks
+        // create div for the hour
 
-// Allow a user to enter an event by clicking on a tblock and display the input field within that tblock
+        // create a text area for the event
 
-// Create a save button within each tblock and use an event listener to save the entered event to local storage when clicked
+        // create a save button
 
-// Use another event listener to retrieve the saved events from local storage and display them on the calendar upon page refresh
+        // append timeblock to the container
 
-// Ensure that the events are persisted between refreshes of a page
+        // Check the current time
+
+        // If the timeblock is in the past, add the past class
+     
+        // If the timeblock is in the present, add the present class
+      
+        // If the timeblock is in the future, add the future class
+    
+        // Add an event listener to the save button
+    
+        // Get the value of the textarea
+      
+        // Get the hour of the timeblock
+     
+        // Save the event to local storage
+ 
+        // Retrieve events from local storage and display them on the corresponding timeblocks
+   
+
+
+
+
+
+
+
+})
