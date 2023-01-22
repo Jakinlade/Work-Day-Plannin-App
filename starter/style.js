@@ -47,30 +47,29 @@ $(document).ready(function() {
 
     // Add an event listener to the save button
     $(".saveBtn").on("click", function() {
+         // Get the value of the textarea
         var event = $(this)
         .siblings(".description")
         .val();
 
+          // Get the hour of the timeblock
         var hour = $(this)
         .siblings(".hour")
         .text()
 
+        // Save the event to local storage
         localStorage.setItem(hour, event);
     });
 
-    // Get the value of the textarea
-    
-    // Get the hour of the timeblock
-    
-    // Save the event to local storage
-
+   
     // Retrieve events from local storage and display them on the corresponding timeblocks
+    $(".description").each(function(){
+        var hour = $(this)
+        .siblings(".description")
+        .text();
+        var event = localStorage.getItem(hour);
+        $(this)
+        .val(event);
+    });
 
-
-
-
-
-
-
-
-})
+});
