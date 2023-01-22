@@ -2,6 +2,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-image: url("../Images/sand2.avif");
+  background-size: cover;
+  background-position: center;
 }
 
 textarea {
@@ -16,9 +19,12 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
+  background-image: url("../Images/hg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .description {
@@ -44,24 +50,24 @@ textarea {
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: orange;
   color: white;
 }
 
