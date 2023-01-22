@@ -25,6 +25,7 @@ $(document).ready(function() {
         // create a save button
         var saveBtn = $("<button>");
         saveBtn.addClass("col-md-2 saveBtn");
+        saveBtn.html("<i class='fas fa-save'></i>");
         timeBlock.append(saveBtn);
 
         // append timeblock to the container
@@ -65,7 +66,7 @@ $(document).ready(function() {
     // Retrieve events from local storage and display them on the corresponding timeblocks
     $(".description").each(function(){
         var hour = $(this)
-        .siblings(".description")
+        .siblings(".hour")
         .text();
         var event = localStorage.getItem(hour);
         $(this)
