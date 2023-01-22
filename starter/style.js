@@ -44,16 +44,28 @@ $(document).ready(function() {
             eventTxt.addClass("future");
         }
     }
-        // Add an event listener to the save button
+
+    // Add an event listener to the save button
+    $(".saveBtn").on("click", function() {
+        var event = $(this)
+        .siblings(".description")
+        .val();
+
+        var hour = $(this)
+        .siblings(".hour")
+        .text()
+
+        localStorage.setItem(hour, event);
+    });
+
+    // Get the value of the textarea
     
-        // Get the value of the textarea
-      
-        // Get the hour of the timeblock
-     
-        // Save the event to local storage
- 
-        // Retrieve events from local storage and display them on the corresponding timeblocks
-   
+    // Get the hour of the timeblock
+    
+    // Save the event to local storage
+
+    // Retrieve events from local storage and display them on the corresponding timeblocks
+
 
 
 
